@@ -1,18 +1,17 @@
 package com.tnx.demo1;
 
-import jdk.nashorn.internal.runtime.logging.Logger;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
 /**
  * @ClassName DemoController
@@ -54,7 +53,7 @@ public class DemoController {
         }
 
         //创建HSSFWorkbook
-        HSSFWorkbook wb = ExcelUtils.getHSSFWorkbook(sheetName, title, content, null);
+        HSSFWorkbook wb = com.tnx.demo1.ExcelUtils.getHSSFWorkbook(sheetName, title, content, null);
 
         //响应到客户端
         try {
