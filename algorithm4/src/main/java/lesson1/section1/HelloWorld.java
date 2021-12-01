@@ -1,4 +1,4 @@
-package lesson1;
+package lesson1.section1;
 
 /**
  * @ClassName HelloWorld
